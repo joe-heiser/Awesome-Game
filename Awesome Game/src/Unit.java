@@ -79,7 +79,7 @@ public class Unit {
 	}
 	// End Constructors
 
-	// Actions
+	//Start Actions
 	public void Heal(int x) {
 		if (this.Health > 0) {
 			this.Health += x;
@@ -105,6 +105,6 @@ public class Unit {
 			return true;
 		}
 	}
-			
+	//End Actions		
 }
 
