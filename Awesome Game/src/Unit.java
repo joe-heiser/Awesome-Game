@@ -96,15 +96,23 @@ public class Unit {
 	public void AddCoin(int x) {
 		this.Coin += x;
 	}
-	public boolean SpendCoin(int x) {
+	private boolean CanSpend(int x) {
 		if(this.Coin - x < 0 ) {
 			return false;
 		}
 		else {
-			this.Coin -= x;
 			return true;
 		}
 	}
+	public void SpendCoin(int x) {
+		if(CanSpend(x)==true) {
+			this.Coin -= x;
+		}
+		else if (CanSpend(x) == false) {
+			
+		}
+	}
+	
 	//End Actions		
 }
 
