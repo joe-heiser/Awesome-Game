@@ -5,7 +5,8 @@ public class Unit {
 	private String Name;
 	private int Health;
 	private int Coin;
-	private int Attackval;
+	private int Attackval = 1;
+	private boolean LifeStatus = true;
 	// End Declare Attributes
 
 	// Start Declare Positional Data
@@ -90,8 +91,8 @@ public class Unit {
 		}
 
 	}
-	public void Attack(Unit u) {
-	
+	public void BasicAttack(Unit u) {
+	u.TakeDamage(this.Attackval);
 	}
 	public void AddCoin(int x) {
 		this.Coin += x;
@@ -105,7 +106,15 @@ public class Unit {
 			return true;
 		}
 	}
-	
+	public void TakeDamage(int x) {
+		if(this.Health - x<0) {
+			this.Name = this.Name +"*DEAD*";
+			this.LifeStatus = false;
+		}
+		else {
+			this.Health -= x;
+		}
+	}
 	//End Actions		
 }
 
