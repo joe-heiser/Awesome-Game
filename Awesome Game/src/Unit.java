@@ -80,9 +80,9 @@ public class Unit {
 	// End Constructors
 
 	// Actions
-	public void Heal() {
+	public void Heal(int x) {
 		if (this.Health > 0) {
-			this.Health += 10;
+			this.Health += x;
 			if (this.Health > 100) {
 				this.Health = 100;
 			}
@@ -90,10 +90,21 @@ public class Unit {
 		}
 
 	}
-	public void attack(Unit u) {
-		
-	}
+	public void Attack(Unit u) {
 	
-
+	}
+	public void AddCoin(int x) {
+		this.Coin += x;
+	}
+	public boolean SpendCoin(int x) {
+		if(this.Coin - x < 0 ) {
+			return false;
+		}
+		else {
+			this.Coin -= x;
+			return true;
+		}
+	}
+			
 }
 
