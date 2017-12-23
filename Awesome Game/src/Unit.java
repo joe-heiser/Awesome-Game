@@ -77,7 +77,7 @@ public class Unit {
 		Health = 100;
 		Coin = 100;
 	}
-	// End Constructors2
+	// End Constructors
 
 	//Start Actions
 	public void Heal(int x) {
