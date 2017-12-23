@@ -62,7 +62,13 @@ public class Unit {
 	public int getCoin() {
 		return Coin;
 	}
+	
+	public boolean isLifeStatus() {
+		return LifeStatus;
+	}
 	// End Getters for Attributes
+
+	
 
 	// Start Constructors
 	public Unit(String name, int health, int coin) {
