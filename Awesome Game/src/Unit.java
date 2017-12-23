@@ -6,12 +6,12 @@ public class Unit {
 	private int Health;
 	private int Coin;
 	private int Attackval;
-	private int Speed = 1;			//Put this back as would be good attribute
+	private int Speed = 1;			// I Put this back as would be good attribute
 	// End Declare Attributes
 
 	// Start Declare Positional Data
-	private int Ypos;
-	private int Xpos;
+	private int Ypos = 50;
+	private int Xpos = 50;
 	private int Yvel;
 	private int Xvel;
 	// End Declare Positional Data
