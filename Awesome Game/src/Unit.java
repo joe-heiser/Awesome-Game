@@ -97,8 +97,9 @@ public class Unit {
 		}
 
 	}
-	public void BasicAttack(Unit u) {
+	public int BasicAttack(Unit u) {
 	u.TakeDamage(this.Attackval);
+	return this.Attackval;
 	}
 	public void AddCoin(int x) {
 		this.Coin += x;
