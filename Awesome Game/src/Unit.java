@@ -5,8 +5,8 @@ public class Unit {
 	private String Name;
 	private int Health;
 	private int Coin;
-	private int Attackval = 1;
-	private boolean LifeStatus = true;
+	private int Attackval;
+	private int Speed = 1;			//Put this back as would be good attribute
 	// End Declare Attributes
 
 	// Start Declare Positional Data
@@ -63,12 +63,14 @@ public class Unit {
 		return Coin;
 	}
 	
-	public boolean isLifeStatus() {
-		return LifeStatus;
+	public void setSpeed(int speed) {
+		Speed = speed;
+	}
+	
+	public int getSpeed() {
+		return Speed;
 	}
 	// End Getters for Attributes
-
-	
 
 	// Start Constructors
 	public Unit(String name, int health, int coin) {
@@ -97,31 +99,29 @@ public class Unit {
 		}
 
 	}
-	public int BasicAttack(Unit u) {
-	u.TakeDamage(this.Attackval);
-	return this.Attackval;
+	public void Attack(Unit u) {
+	
 	}
 	public void AddCoin(int x) {
 		this.Coin += x;
 	}
-	public boolean SpendCoin(int x) {
+	private boolean CanSpend(int x) {
 		if(this.Coin - x < 0 ) {
 			return false;
 		}
 		else {
-			this.Coin -= x;
 			return true;
 		}
 	}
-	public void TakeDamage(int x) {
-		if(this.Health - x<0) {
-			this.Name = this.Name +"*DEAD*";
-			this.LifeStatus = false;
+	public void SpendCoin(int x) {
+		if(CanSpend(x)==true) {
+			this.Coin -= x;
 		}
-		else {
-			this.Health -= x;
+		else if (CanSpend(x) == false) {
+			
 		}
 	}
+	
 	//End Actions		
 }
 
