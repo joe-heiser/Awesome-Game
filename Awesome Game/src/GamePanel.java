@@ -88,7 +88,7 @@ class GamePanel extends JPanel implements ActionListener {
 	}
 	
 	void right() {
-		if (moveableRight == true & bk_x < BKMAX_X - 800) {
+		if (moveableRight == true & bk_x < BKMAX_X - 630) {
 			bk_x += 8; // increasing xcoord while moving right
  			run++;	//For unimplemented animation counter shit
  			
