@@ -6,7 +6,7 @@ public class GameFrame extends JFrame {
  
 	GameFrame() {
 		add(gp);
-		setSize(630, 630);
+		setSize(800, 800);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
  
